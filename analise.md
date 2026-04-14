@@ -50,7 +50,9 @@ Combinações
 Estrutura típica:
 
 Categoria → Produto → Opções
+
 Parte 2
+
 Tipo de arquitetura
 
 Arquitetura Cliente-Servidor (Web)
@@ -75,7 +77,8 @@ Banco → persistência
 
 Porém, pode haver mistura de responsabilidades, comum em sistemas pequenos.
 
-Parte 3 – Análise de Design
+Parte 3
+
 Coesão
 Moderada a alta
 Cada parte parece ter uma função específica (produtos, carrinho, pedido)
@@ -93,3 +96,31 @@ Mudanças no backend podem quebrar frontend
 Separação de responsabilidades
 Parcialmente presente
 Mas pode não ser bem estruturada internamente (sem código não dá pra garantir)
+
+Parte 4
+
+1. O sistema aparenta usar padrões?
+
+Indiretamente, sim:
+
+Estrutura sugere uso de padrões comuns web
+
+2. Onde poderiam existir?
+
+MVC (muito provável)
+Model → Produto, Pedido
+View → páginas web
+Controller → lógica de requisições
+Singleton
+Conexão com banco de dados
+Configurações do sistema
+Factory
+Criação de produtos personalizados:
+Pizza com sabores diferentes
+Combos
+
+3. Onde poderiam ser aplicados?
+
+Factory → criação de pedidos/produtos
+Singleton → sessão/carrinho global
+MVC → organização geral do sistema
